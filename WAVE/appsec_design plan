@@ -1,0 +1,266 @@
+* Requirement Specifications of Appsec Scanner
+
+	-Spider the entire site and get a list of all the valid URL's.
+	-Browse all the forms and generate Web Proxy Logs ; this will give you a complete list of parameters.
+	-Create an exclusion list of URL's which are not to be touched at all in the config file.
+	-Configure a list of attacks that you want to be performing in the config file.
+	-Configure all other tool options in the config file.
+	-Configure the list of attack payloads wherever relevant in a config file.
+	-Send requests for specific attacks to the server.
+	-Analysis of responses received.
+	-Analysis of Responses captured in the Log files for few attacks
+	-Further Exploitation if so needed.
+	-Report generation of all vulnerabilities.
+
+#---------------------------------------------------------------------------------------------------------
+
+Initial Pseudo Code for Appsec Scanner
+
+&readconfig;              # Read configuration file....LOG file names, Exclusion URLs, Attacks to be performed
+for my $logfile (@log_files)
+{
+    &read_log_file($logfile);   # Read Logs
+    &execute_attack;            # Perform Attacks
+    &generate_report;           # Generate Report
+}
+
+
+sub read_config_file
+{
+	# Read Log file names specified
+	# Verification of Log names
+	# Looking whether all the files are present in the Folder
+	# Looking for an empty Log file
+	# Verification of Attack Names
+	# Verification of Exclusion URLS
+
+	#-- If any of the above test cases fail, break!
+}
+
+sub read_log_file
+{
+	are_logs_read();
+	# taking care of all the conditions for reading logs (unique, Exclusion URLs, etc)
+}
+
+
+sub execute_attack{
+    for my $attack (@attack_array)    # @attack_array holds all the attach user wants to perform
+    {
+        if ($attack eq "xss")  {
+            &XSS_attack;
+        }
+        elsif ($attack eq "misc")  {
+            &MISC_attack;
+        }
+    }
+}
+
+#------------------------------------------------------------------------------------
+#-- 1. Function analyzing XSS & Response Splitting vulnerabilities
+sub XSS_attack()
+{
+		get_request_patterns();	#From the previously read proxy logs
+		analyze_response_from Log();
+		if (reflected)
+		{
+			catch_XSS_vul_Params ();
+			Catch_Resp_Split_Vul_Params ();
+		}
+	generate_XSS_report();
+	generate_Resp_Split_report();
+}
+#------------------------------------------------------------------------------------
+#-- 2. Function analyzing Miscellaneous vulnerabilities
+		1. Check for Cookie Attributes
+		2. Check for Response Banners (Server)
+		3. Check for Browser Cache
+		4. Check for Autocomplete Attributes
+
+sub MISC_attack {
+
+	#-- Searching through all Responses (Header part)
+	foreach (Response_headers)
+	{
+
+	1. Check for Cookie Attributes
+			analyze_response_header_for_Set-Cookie_attributes();
+			if (!configured & Wrong_configured)
+			{
+				add_cookie_issue();
+			}
+
+	2. Check for Response Banners
+			analyze_response_header_for_Banners();
+			if (!configured)
+			{
+				add_banner_issue();
+			}
+
+
+	3. Check for Cache Control Attributes
+			analyze_response_header_for_cache_attributes();
+			if (!configured & Wrong_configured)
+			{
+				add_cache_issue();
+			}
+
+	}
+	generate_Cookie_attribute_report();
+	generate_banner_report();
+	generate_cache_report();
+
+	#-----------------------------------------------------
+	#-- Searching through all Requests
+	foreach (requests)
+	{
+		# 1. Taking Care of all parametrized GET requests
+		if ($request =~/GET\s(.*)\?(.*)\sHTTP\/\d{1}\.\d{1}/) {
+			capture_URL;
+			capture_params;
+		}
+	}
+	generate_history_report();
+
+	#-----------------------------------------------------
+	#-- Searching through all Responses (Body)
+	foreach (response_body)
+	{
+		@forms = ( $text =~ /(<form\s+(?:.*?)>(?:.*?)<\/form>)/sg );
+		foreach (<form> tag) {
+			if (autocomplete != off){
+				check_individual_fields();
+			}
+
+			@emails = ( $text =~ /((?:[a-z|_])+@(?:.+)\.(?:[a-z|A-Z]+))?/g );
+			{
+				On Hold! Regex Problem
+			}
+		}
+		generate_autocomplete_report();
+	}
+}
+#------------------------------------------------------------------------------------
+#-- 3. Function analyzing OS Command Injection vulnerabilities
+
+sub OSCmd_attack()
+{
+	#-- Read configuration file for getting the Payload file location
+	$Payload_filename = get_payload_file_location();
+	
+	# Call function defined in parsepayload.pm file to Read file for all the Payloads
+	@payloads = &parsepayload::getpayloads($xml_filename, $attack_name); 	#passing the filename and attack name to the module.
+		
+	#-- Searching through all Requests
+	foreach (requests)
+	{
+		# 1. Taking Care of all parametrized requests
+		foreach (parameterised_reuqest) {
+			get_request_patterns();	#From the previously read proxy logs
+			for_each_parameter() # parameters include QueryString, POST Parameters
+			{
+				foreach (@payloads) {
+					send_request();
+					save_response();
+					analyze_response();
+					if (successful)
+					{
+						add_parameter_to_vulnerable_param_list_();
+					}
+				}
+			}
+		}
+	}
+	generate_OSCmd_report();
+}
+#------------------------------------------------------------------------------------
+#-- 4. Function analyzing URL Redirection vulnerabilities
+
+sub URLRedir_attack()
+{
+	#-- Searching through all Requests
+	foreach (requests)
+	{
+		# 1. Taking Care of all parametrized requests
+		foreach (parameterised_reuqest) {
+			get_request_patterns();	#From the previously read proxy logs
+			for_each_parameter() # parameters include QueryString, POST and Header Parameters
+			{
+				send_request();
+				save_response();
+				
+	# Need to think on some issues like..... what if response comes after sending few request...
+	
+				analyze_response_header_302();
+				if (successful)
+				{
+					add_parameter_to_vulnerable_param_list_();
+				}
+			}
+		}
+	}
+	generate_URLRedir_report();
+}
+#------------------------------------------------------------------------------------
+#-- 5. Function analyzing Deep URL vulnerabilities
+
+sub DeepURl_attack()
+{
+	#-- Reading the Configuration file for Cust Eror page URL and Authentication Parameter
+	get_custom_errorPage_URL();
+	get_authentication_param();
+
+	#-- Searching through all Requests
+	foreach (requests)
+	{
+		remove_authentication_param;
+		send_request();
+		save_response();
+	
+		analyze_response_header(); # Looking for response code other than 200(series) AND 302(series)..need some research
+		if (!found)
+		{
+			analyze_response_header_302(); #doing comparision with custom error page URL
+			if (!matched)
+			{		
+				analyze_response_();	#doing comparision character by character to logged Response
+				if (matched)
+				{
+					add_URL_to_vulnerable_URL_list_();
+				}
+			}
+		}
+	}
+}
+#------------------------------------------------------------------------------------
+#-- 6. Function analyzing SSL vulnerabilities
+
+sub SSL_attack()
+{
+	#-- Reading the Configuration file for Cust Eror page URL and Authentication Parameter
+	get_port_number();
+
+	if (port_number)
+	{	
+		#-- Searching through all Requests
+		foreach (requests)
+		{
+			send_request();
+			save_response();
+			analyze_response_header(); # Looking for response code other than 200(series) AND 302(series)..need some research
+			if (!found)
+			{
+				analyze_response_header_302_location_https(); #doing comparision with custom error page URL
+				if (!matched)
+				{		
+					analyze_response_();	#doing comparision character by character to logged Response
+					if (matched)
+					{
+						add_URL_to_vulnerable_URL_list_();
+					}
+				}
+			}
+		}
+	}
+}
+

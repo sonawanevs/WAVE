@@ -1,0 +1,33 @@
+1. SQL Injection
+2. XSS									Completed
+3. URL Redirection
+4. LDAP Injection
+5. OS Command Injection
+6. Deep URL without Logging in
+7. SSL Check for every page/link
+8. Response Splitting					Completed
+9. Email IDs							Partial (Regex Issue)
+10. SSI Directives
+11. PHP Remote file Inclusion (PHP secific app only)
+
+New:
+1. Response Header:- Cookie Attributes (Path/Domain/HttpOnly/Secure) / Cache Control (Cache-Control/Pragma) 	Completed
+2. Password/Other (account number,credit card no, etc) field with autocomplete enabled	Completed
+3. Response Banners Server/X-Powered-By/X-AspNet-Version	Completed
+3. Sentitive Information in History (Sesion Token in URL)	Completed
+
+
+These can also be implemented:-
+4. Google Hacking
+5. Private IP in code
+
+#----------------------------------------------------------------------
+4. OS Command Injection		100%
+2. URL Redirection		100%
+1. SQL Injection		Error Based (50%)...
+5. Deep URL without Logging in 		Content-Length ? (50%)
+6. SSL Check for every page/link 	Content-Length ?  (50%)
+3. LDAP Injection		Need Research
+7. SSI Directives		Need research
+8. PHP Remote file Inclusion (PHP secific app only) Need research
+#----------------------------------------------------------------------

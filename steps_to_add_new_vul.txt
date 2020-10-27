@@ -1,0 +1,22 @@
+To add a new vulnerability analysis in WAVE:
+
+1. Add the code in WAVE.pl for performing that attack.
+2. Add the code in parseconfig.pm for that attack name.
+3. add the attack name in configuration.txt
+
+
+
+Thanks Vaibhav. I read through the design and the plan as well as the Mindmap. Did not look at the code in detail. Will look at it later. Here are a few things I wanted to discuss briefly. It will take 5 minutes of your time. I'll call you soon.
+
+Here are the points:
+
+1) design doc before code , not after
+2) order of the design document as per ur code writing
+3) code in svn
+4) clarification of function writing, and naming convention
+5) any major change in reporting
+
+Cheers
+Arvind
+
+

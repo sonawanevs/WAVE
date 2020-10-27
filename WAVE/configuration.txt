@@ -1,0 +1,75 @@
+------------------------------------------------------------------------------------------
+1. Please specify the name of your LOG file within Double quotes. Enter the multiple log files seperated by comma operator without space:-
+#Example: LOG_FILE_NAME="http_logs,https_logs,demologs"
+
+LOG_FILE_NAME="final"
+
+------------------------------------------------------------------------------------------
+2. Please Enter the web page URL on which you do not want to perform testing. Enter the urls seperated by comma operator without space:- 
+#Example: URL_EXCLUSION_LIST="http://localhost/favicon.ico,http://localhost/xss/logout.aspx"
+
+URL_EXCLUSION_LIST="http://localhost/favicon.ico,http://localhost/xss/logout.aspx"
+
+------------------------------------------------------------------------------------------
+3. Please provide the name of the attacks you are willing to exploit on the web pages. Enter names seperated by the comma operator without space:-
+#Example: ATTACK_NAMES="xss,misc,oscmd,urlredir,deepurl,nossl"
+
+ATTACK_NAMES="misc"
+
+------------------------------------------------------------------------------------------
+4. Please specify whether Web application runs over HTTPS. If yes, Set the value of following variable to 1 else to 0:-
+#Example: IS_SECURE="1" for application running on SSL OR IS_SECURE="0" for application not running on SSL
+
+IS_SECURE="1"
+
+------------------------------------------------------------------------------------------
+5. Please Specify the Domain of your web application:
+#Example: HOST="localhost"
+
+HOST="localhost"
+
+------------------------------------------------------------------------------------------
+6. Please Specify the path where reports should be generated if required otherwise leave it as it is:
+#Example: REPORT_DIRECTORY="/home/vaibhav/WAVE/reports/"
+
+REPORT_DIRECTORY="/storage/wave/WAVE/reports/"
+
+------------------------------------------------------------------------------------------
+7. Please Specify the path where log files are present if required otherwise leave it as it is:
+#Example: LOG_DIRECTORY="/home/vaibhav/WAVE/logs/"
+
+LOG_DIRECTORY="/storage/wave/WAVE/logs/"
+
+------------------------------------------------------------------------------------------
+8. Please Specify the Attack Specific Payload file with its system path if required otherwise leave it as it is:
+#Example: PAYLOAD_DIRECTORY="/home/vaibhav/WAVE/payloads/SQLInj_payload.txt"
+
+OSCMD_PAYLOAD="/storage/wave/WAVE/payloads/OsCmd_Inj_payload.txt"
+URLRedir_PAYLOAD="/storage/wave/WAVE/payloads/URLRedir_payload.txt"
+SQL_PAYLOAD=""
+
+------------------------------------------------------------------------------------------
+9. Please Specify the Remote systems port number on which HTTP Service is running. If HTTP service is not running, leave it as it is:
+#Example: HTTP_PORT="8080" if HTTP service is running on port 8080 OR HTTP_PORT="" if HTTP service is not running
+
+HTTP_PORT="80"
+
+------------------------------------------------------------------------------------------
+10. Please Specify the Customize Error page URL if configured otherwise leave it as it is:
+#Example: CUSTOM_ERROR_PAGE="http://localhost/customerror.aspx" if configured OR CUSTOM_ERROR_PAGE="" if no customized error page is configured
+
+CUSTOM_ERROR_PAGE="http://localhost/customerror.aspx"
+
+------------------------------------------------------------------------------------------
+11. Please Specify the Login page URL :
+#Example: LOGIN_PAGE="http://localhost/xss/login.aspx"
+
+LOGIN_PAGE="http://localhost/xss/login.aspx"
+
+------------------------------------------------------------------------------------------
+12. Please Specify the Server Side Authentication Validating parameter like cookie or POST parameter:
+#Example: AUTH_PARAMETER="Cookie=asdkjnlakvjnasdkjv" OR AUTH_PARAMETER="is_authenticated=1" may be it is a hidden post parameter
+
+AUTH_PARAMETER="is_authenticated=1"
+
+------------------------------------------------------------------------------------------

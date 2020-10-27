@@ -1,0 +1,153 @@
+======================================================
+12:18:42 PM  http://localhost:80  [127.0.0.1]
+======================================================
+GET /xss/register.php HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.9) Gecko/20100317 SeaMonkey/2.0.4
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Proxy-Connection: keep-alive
+
+
+======================================================
+HTTP/1.1 200 OK
+Date: Mon, 12 Apr 2010 06:48:41 GMT
+Server: Apache/2.2.12 (Ubuntu)
+X-Powered-By: PHP/5.2.10-2ubuntu6.4
+Vary: Accept-Encoding
+Content-Type: text/html
+Content-Length: 1171
+
+<HTML>
+<TITLE>XSS ATTACKS....</TITLE>
+<BODY>
+<H2>User Registration by Method "POST"....</H2>
+<h3>----------------------------------------------------</h3>
+<FORM method=POST action="RegSuccess_POST.php">
+Name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT type="text" name="name" value=""><br>
+Telephone : <INPUT type="text" name="telephone" value=""><br>
+Birth Date : <INPUT type="text" name="birthdate" value=""><br><br>
+<INPUT type="hidden" name="usernumber" value="177">
+<INPUT type="hidden" name="attempt" value="10011">
+<INPUT TYPE="submit" name="Submit" value=Submit></INPUT><br>
+</FORM>
+<br>
+<H2>User Registration by Method "POST"....</H2>
+<h3>----------------------------------------------------</h3>
+<FORM method=GET action="RegSuccess_GET.php">
+Name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT type="text" name="name" value=""><br>
+Telephone : <INPUT type="text" name="telephone" value=""><br>
+Birth Date : <INPUT type="text" name="birthdate" value=""><br><br>
+<INPUT type="hidden" name="usernumber" value="177">
+<INPUT type="hidden" name="attempt" value="10011">
+<INPUT TYPE="submit" name="Submit" value=Submit></INPUT><br>
+</FORM>
+
+</BODY>
+</HTML>
+
+======================================================
+
+
+
+======================================================
+12:18:58 PM  http://localhost:80  [127.0.0.1]
+======================================================
+POST /xss/RegSuccess_POST.php HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.9) Gecko/20100317 SeaMonkey/2.0.4
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Proxy-Connection: keep-alive
+Referer: http://localhost/xss/register.php
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 102
+
+name=vaibhav&telephone=93221414006&birthdate=14%2F12%2F1986&usernumber=10011&attempt=177&Submit=Submit
+======================================================
+HTTP/1.1 200 OK
+Date: Mon, 12 Apr 2010 06:48:57 GMT
+Server: Apache/2.2.12 (Ubuntu)
+X-Powered-By: PHP/5.2.10-2ubuntu6.4
+Vary: Accept-Encoding
+Content-Type: text/html
+Content-Length: 520
+
+<HTML>
+<TITLE>XSS ATTACKS....</TITLE>
+<BODY>
+<H1>User Registration Details....</H1>
+<h3>----------------------------------------------------</h3>
+Welcome User vaibhav!                                Total Registrations : 177<br>
+---------------------------------------------<br>
+Take a look at your Details:<br>
+---------------------------------------------<br>
+Name : vaibhav<br>
+Telephone : 93221414006<br>
+Birth Date: 14/12/1986<br>
+
+<INPUT type="hidden" name="accessattempt" value="10011">
+
+</FORM>
+</BODY>
+</HTML>
+
+
+======================================================
+
+
+
+======================================================
+12:19:34 PM  http://localhost:80  [127.0.0.1]
+======================================================
+GET /xss/RegSuccess_GET.php?name=vaibhav&telephone=02227481745&birthdate=14%2F12%2F1986&usernumber=10011&attempt=177&Submit=Submit HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.9) Gecko/20100317 SeaMonkey/2.0.4
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Proxy-Connection: keep-alive
+Referer: http://localhost/xss/register.php
+
+
+======================================================
+HTTP/1.1 200 OK
+Date: Mon, 12 Apr 2010 06:49:33 GMT
+Server: Apache/2.2.12 (Ubuntu)
+X-Powered-By: PHP/5.2.10-2ubuntu6.4
+Vary: Accept-Encoding
+Content-Type: text/html
+Content-Length: 520
+
+<HTML>
+<TITLE>XSS ATTACKS....</TITLE>
+<BODY>
+<H1>User Registration Details....</H1>
+<h3>----------------------------------------------------</h3>
+Welcome User vaibhav!                                Total Registrations : 177<br>
+---------------------------------------------<br>
+Take a look at your Details:<br>
+---------------------------------------------<br>
+Name : vaibhav<br>
+Telephone : 02227481745<br>
+Birth Date: 07/12/1986<br>
+
+<INPUT type="hidden" name="accessattempt" value="10011">
+
+</FORM>
+</BODY>
+</HTML>
+
+
+======================================================
+
+
+

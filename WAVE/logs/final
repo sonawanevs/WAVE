@@ -1,0 +1,291 @@
+======================================================
+2:02:30 PM  http://localhost:80  [127.0.0.1]
+======================================================
+GET /xss/register.php HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.19) Gecko/2010040116 Ubuntu/9.04 (jaunty) Firefox/3.0.19
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Cookie: ASPSessionID=asldakjblvakdabsdkablsblakhbfvlkhva; path/; Secure
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Proxy-Connection: keep-alive
+
+
+======================================================
+HTTP/1.1 200 OK
+Date: Mon, 03 May 2010 08:32:29 GMT
+Server: Apache/2.2.11 (Ubuntu) PHP/5.2.6-3ubuntu4.5 with Suhosin-Patch mod_ssl/2.2.11 OpenSSL/0.9.8g
+X-Powered-By: PHP/5.2.6-3ubuntu4.5
+Vary: Accept-Encoding
+Content-Type: text/html
+Content-Length: 1892
+
+<HTML>
+<TITLE>XSS ATTACKS....</TITLE>
+<BODY>
+<H2>User Registration by Method "POST" Content-Type: application/x-www-form-urlencoded....</H2>
+<h3>----------------------------------------------------</h3>
+<FORM method=POST action="RegSuccess_POST.php" Autocomplete=off>
+Name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT type="text" name="name" value="" autocomplete="on"><br>
+Telephone : <INPUT type="text" name="telephone" value="" autocomplete="on"><br>
+Birth Date : <INPUT type="password" name="birthdate" value="" autocomplete="on"><br><br>
+<INPUT type="hidden" name="usernumber" value="177">
+<INPUT type="hidden" name="attempt" value="10011">
+<INPUT TYPE="submit" name="Submit" value=Submit></INPUT><br>
+</FORM>
+<br>
+<H2>User Registration by Method "GET"....</H2>
+<h3>----------------------------------------------------</h3>
+<FORM method=GET action="RegSuccess_GET.php" autocomplete="on">
+Name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT type="text" name="name" value=""><br>
+Telephone : <INPUT type="text" name="telephone" value=""><br>
+Birth Date : <INPUT type="password" name="birthdate" value=""><br><br>
+<INPUT type="hidden" name="usernumber" value="177">
+<INPUT type="hidden" name="attempt" value="10011">
+<INPUT TYPE="submit" name="Submit" value=Submit></INPUT><br>
+<INPUT TYPE="hidden" name="test" value=></INPUT><br>
+</FORM>
+<H2>User Registration by Method "POST" Content-Type: multipart/form-data....</H2>
+<h3>----------------------------------------------------</h3>
+<FORM method=POST action="RegSuccess_POST.php" enctype="multipart/form-data">
+Name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<INPUT type="text" name="name" value=""><br>
+Telephone : <INPUT type="text" name="telephone" value="" autocomplete="off"><br>
+Birth Date : <INPUT type="password" name="birthdate" value="" autocomplete="on"><br><br>
+<INPUT type="hidden" name="usernumber" value="177">
+<INPUT type="hidden" name="attempt" value="10011">
+<INPUT TYPE="submit" name="Submit" value=Submit></INPUT><br>
+</FORM>
+<br>
+</BODY>
+</HTML>
+
+======================================================
+
+
+
+======================================================
+2:02:35 PM  http://localhost:80  [127.0.0.1]
+======================================================
+GET /favicon.ico HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.19) Gecko/2010040116 Ubuntu/9.04 (jaunty) Firefox/3.0.19
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Cookie: ASPSessionID=asldakjblvakdabsdkablsblakhbfvlkhva; path/; Secure
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Proxy-Connection: keep-alive
+
+
+======================================================
+HTTP/1.1 404 Not Found
+Date: Mon, 03 May 2010 08:32:34 GMT
+Server: Apache/2.2.11 (Ubuntu) PHP/5.2.6-3ubuntu4.5 with Suhosin-Patch mod_ssl/2.2.11 OpenSSL/0.9.8g
+Vary: Accept-Encoding
+Server: Microsoft-IIS
+X-Powered-By: ASP.NET
+X-AspNet-Version: 2.0567
+Content-Type: text/html; charset=iso-8859-1
+Content-Length: 354
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL /favicon.ico was not found on this server.</p>
+<hr>
+<address>Apache/2.2.11 (Ubuntu) PHP/5.2.6-3ubuntu4.5 with Suhosin-Patch mod_ssl/2.2.11 OpenSSL/0.9.8g Server at localhost Port 80</address>
+</body></html>
+
+======================================================
+
+
+
+======================================================
+2:02:52 PM  http://localhost:80  [127.0.0.1]
+======================================================
+POST /xss/RegSuccess_POST.php HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.19) Gecko/2010040116 Ubuntu/9.04 (jaunty) Firefox/3.0.19
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Cookie: ASPSessionID=asldakjblvakdabsdkablsblakhbfvlkhva; path/; Secure
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Proxy-Connection: keep-alive
+Referer: http://localhost/xss/register.php
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 101
+
+name=vaibhav&telephone=9322141006&birthdate=14%2F12%2F1986&usernumber=177&attempt=10011&Submit=Submit
+======================================================
+HTTP/1.1 200 OK
+Date: Mon, 03 May 2010 08:32:51 GMT
+Server: Microsoft-IIS
+X-Powered-By: ASP.NET
+X-AspNet-Version: 2.0567
+Vary: Accept-Encoding
+Set-Cookie: ASP.NET_sessionID=nahfb9347ry0197rh341097g4r; HttpOnly; Secure; path=/; Domain=www.abc.com
+hahah=vaibhav
+Content-Type: text/html
+Content-Length: 519
+
+<HTML>
+<TITLE>XSS ATTACKS....</TITLE>
+<BODY>
+<H1>User Registration Details....</H1>
+<h3>----------------------------------------------------</h3>
+Welcome User vaibhav!                                Total Registrations : 177<br>
+---------------------------------------------<br>
+Take a look at your Details:<br>
+---------------------------------------------<br>
+Name : vaibhav<br>
+Telephone : 9322141006<br>
+Birth Date: 14/12/1986<br>
+
+<INPUT type="hidden" name="accessattempt" value="10011">
+
+</FORM>
+</BODY>
+</HTML>
+
+
+======================================================
+
+
+
+======================================================
+2:03:13 PM  http://localhost:80  [127.0.0.1]
+======================================================
+GET /xss/RegSuccess_GET.php?name=vaibhav&telephone=9321731716&birthdate=27%2F01%2F1951&usernumber=177&attempt=10011&Submit=Submit HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.19) Gecko/2010040116 Ubuntu/9.04 (jaunty) Firefox/3.0.19
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Cookie: ASPSessionID=asldakjblvakdabsdkablsblakhbfvlkhva; path/; Secure
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive: 300
+Proxy-Connection: keep-alive
+Referer: http://localhost/xss/register.php
+
+
+======================================================
+HTTP/1.1 200 OK
+Date: Mon, 03 May 2010 08:33:12 GMT
+Server: Apache/2.2.11 (Ubuntu) PHP/5.2.6-3ubuntu4.5 with Suhosin-Patch mod_ssl/2.2.11 OpenSSL/0.9.8g
+X-Powered-By: PHP/5.2.6-3ubuntu4.5
+Vary: Accept-Encoding
+Cache-Control: cache
+Pragma: cache
+Set-Cookie: Session_cookie=subhash
+Content-Type: text/html
+Content-Length: 519
+
+<HTML>
+<TITLE>XSS ATTACKS....</TITLE>
+<BODY>
+<H1>User Registration Details....</H1>
+<h3>----------------------------------------------------</h3>
+Welcome User subhash!                                Total Registrations : 177<br>
+---------------------------------------------<br>
+Take a look at your Details:<br>
+---------------------------------------------<br>
+Name : subhash<br>
+Telephone : 9321731716<br>
+Birth Date: 27/01/1951<br>
+
+<INPUT type="hidden" name="accessattempt" value="10011">
+
+</FORM>
+</BODY>
+</HTML>
+
+
+======================================================
+
+
+
+======================================================
+2:03:49 PM  http://localhost:80  [127.0.0.1]
+======================================================
+POST /xss/RegSuccess_POST.php HTTP/1.1
+Host: localhost
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.19) Gecko/2010040116 Ubuntu/9.04 (jaunty) Firefox/3.0.19
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Cookie: ASPSessionID=asldakjblvakdabsdkablsblakhbfvlkhva; path/; Secure
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Cache-Control: no-cache
+Pragma: no-cache
+Keep-Alive: 300
+Proxy-Connection: keep-alive
+Referer: http://localhost/xss/register.php
+Content-Type: multipart/form-data; boundary=---------------------------107110923720607799121873973846
+Content-Length: 785
+
+-----------------------------107110923720607799121873973846
+Content-Disposition: form-data; name="name"
+
+vaibhav
+-----------------------------107110923720607799121873973846
+Content-Disposition: form-data; name="telephone"
+
+9619111999
+-----------------------------107110923720607799121873973846
+Content-Disposition: form-data; name="birthdate"
+
+25/01/1983
+-----------------------------107110923720607799121873973846
+Content-Disposition: form-data; name="usernumber"
+
+177
+-----------------------------107110923720607799121873973846
+Content-Disposition: form-data; name="attempt"
+
+10011
+-----------------------------107110923720607799121873973846
+Content-Disposition: form-data; name="Submit"
+
+Submit
+-----------------------------107110923720607799121873973846
+
+======================================================
+HTTP/1.1 200 OK
+Date: Mon, 03 May 2010 08:33:48 GMT
+Server: Apache/2.2.11 (Ubuntu) PHP/5.2.6-3ubuntu4.5 with Suhosin-Patch mod_ssl/2.2.11 OpenSSL/0.9.8g
+X-Powered-By: PHP/5.2.6-3ubuntu4.5
+Vary: Accept-Encoding
+Content-Type: text/html
+Content-Length: 519
+
+<HTML>
+<TITLE>XSS ATTACKS....</TITLE>
+<BODY>
+<H1>User Registration Details....</H1>
+<h3>----------------------------------------------------</h3>
+Welcome User shalaka!                                Total Registrations : 177<br>
+---------------------------------------------<br>
+Take a look at your Details:<br>
+---------------------------------------------<br>
+Name : shalaka<br>
+Telephone : 9619111999<br>
+Birth Date: 25/01/1983<br>
+
+<INPUT type="hidden" name="accessattempt" value="10011">
+
+</FORM>
+</BODY>
+</HTML>
+
+
+======================================================
+
+
+

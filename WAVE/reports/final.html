@@ -1,0 +1,1566 @@
+<html>
+<head>
+	<title>Vulnerability Report :- final </title>
+</head>
+<body>
+<!-- Start Code -->
+	<table border="0" width="100%" height="100%" cellpadding="2">
+		<tr>
+		    <td height="14%" width="10%" valign="top"><img alt="WAVE - Web Application Vulnerability analyzing Engine" src="../images/wave.png" height="70" width="170"></td>
+		    <td height="14%" width="80%" valign="top"></td>
+		</tr>
+        <tr>
+            <td valign="top"  colspan="3" >
+           		<div style="width: auto; height: 440px; overflow: auto; border: 1px solid black;">
+
+<!-- Mid Code -->
+
+					<h4><span id="1"><font color="black" face="Impact" size="4">1. Cross Site Scripting&nbsp;&nbsp;<a href="#0"><font color="gray" face="Impact" size="1">PREVIOUS</a></font>&nbsp;&nbsp;<a href="#2"><font color="gray" face="Impact" size="1">NEXT</a></font></font></span></h4>
+                <table border="1" cellpadding="5">
+                    <!-- Single Loop for <tr> as only one row for Displaying Column names-->
+                    <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="maroon" face="courier" size="2">Request URL</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="maroon" face="courier" size="2">Object Type</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="maroon" face="courier" size="2">Object Name</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="maroon" face="courier" size="2">Object Value</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="maroon" face="courier" size="2">Response URL</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="maroon" face="courier" size="2">Reflection at..</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="maroon" face="courier" size="2">Reflected at..</font></b></h5>
+		                    </td>
+                    </tr>
+
+                    <!-- FOR Loop for <tr> as well as it depends on the number of vulnerabilities found -->
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">name</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">vaibhav</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Welcome User vaibhav!                                Total Registrations : 177&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">name</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">vaibhav</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Name : vaibhav&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">name</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">vaibhav</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Header</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">hahah=vaibhav</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">telephone</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">9619111999</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Telephone : 9619111999&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">birthdate</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">25/01/1983</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Birth Date: 25/01/1983&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">usernumber</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">177</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Welcome User shalaka!                                Total Registrations : 177&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">usernumber</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">177</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Welcome User subhash!                                Total Registrations : 177&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">usernumber</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">177</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;usernumber&quot; value=&quot;177&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">usernumber</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">177</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;usernumber&quot; value=&quot;177&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">usernumber</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">177</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;usernumber&quot; value=&quot;177&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">usernumber</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">177</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Welcome User vaibhav!                                Total Registrations : 177&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">attempt</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">10011</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;accessattempt&quot; value=&quot;10011&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">attempt</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">10011</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;accessattempt&quot; value=&quot;10011&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">attempt</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">10011</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;attempt&quot; value=&quot;10011&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">attempt</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">10011</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;attempt&quot; value=&quot;10011&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">attempt</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">10011</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;attempt&quot; value=&quot;10011&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">attempt</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">10011</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;accessattempt&quot; value=&quot;10011&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT TYPE=&quot;submit&quot; name=&quot;Submit&quot; value=Submit&gt;&lt;/INPUT&gt;&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT TYPE=&quot;submit&quot; name=&quot;Submit&quot; value=Submit&gt;&lt;/INPUT&gt;&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT TYPE=&quot;submit&quot; name=&quot;Submit&quot; value=Submit&gt;&lt;/INPUT&gt;&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">GET: /xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">name</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">vaibhav</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Welcome User vaibhav!                                Total Registrations : 177&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">GET: /xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">name</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">vaibhav</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Name : vaibhav&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">GET: /xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">name</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">vaibhav</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Header</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">hahah=vaibhav</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">GET: /xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">telephone</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">9321731716</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Telephone : 9321731716&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">GET: /xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">birthdate</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">27/01/1951</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Birth Date: 27/01/1951&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">GET: /xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">usernumber</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">177</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Welcome User shalaka!                                Total Registrations : 177&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">GET: /xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">usernumber</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">177</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Welcome User subhash!                                Total Registrations : 177&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">GET: /xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">usernumber</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">177</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;usernumber&quot; value=&quot;177&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">GET: /xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">usernumber</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">177</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;usernumber&quot; value=&quot;177&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">GET: /xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">usernumber</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">177</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;usernumber&quot; value=&quot;177&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">GET: /xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">usernumber</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">177</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Welcome User vaibhav!                                Total Registrations : 177&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">GET: /xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">attempt</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">10011</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;accessattempt&quot; value=&quot;10011&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">GET: /xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">attempt</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">10011</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;accessattempt&quot; value=&quot;10011&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">GET: /xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">attempt</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">10011</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;attempt&quot; value=&quot;10011&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">GET: /xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">attempt</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">10011</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;attempt&quot; value=&quot;10011&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">GET: /xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">attempt</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">10011</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;attempt&quot; value=&quot;10011&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">GET: /xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">attempt</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">10011</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;accessattempt&quot; value=&quot;10011&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">GET: /xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT TYPE=&quot;submit&quot; name=&quot;Submit&quot; value=Submit&gt;&lt;/INPUT&gt;&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">GET: /xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT TYPE=&quot;submit&quot; name=&quot;Submit&quot; value=Submit&gt;&lt;/INPUT&gt;&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">GET: /xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT TYPE=&quot;submit&quot; name=&quot;Submit&quot; value=Submit&gt;&lt;/INPUT&gt;&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">name</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">vaibhav</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Welcome User vaibhav!                                Total Registrations : 177&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">name</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">vaibhav</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Name : vaibhav&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">name</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">vaibhav</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Header</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">hahah=vaibhav</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">telephone</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">9322141006</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Telephone : 9322141006&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">birthdate</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">14/12/1986</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Birth Date: 14/12/1986&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">usernumber</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">177</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Welcome User shalaka!                                Total Registrations : 177&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">usernumber</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">177</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Welcome User subhash!                                Total Registrations : 177&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">usernumber</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">177</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;usernumber&quot; value=&quot;177&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">usernumber</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">177</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;usernumber&quot; value=&quot;177&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">usernumber</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">177</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;usernumber&quot; value=&quot;177&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">usernumber</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">177</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Welcome User vaibhav!                                Total Registrations : 177&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">attempt</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">10011</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;accessattempt&quot; value=&quot;10011&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">attempt</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">10011</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;accessattempt&quot; value=&quot;10011&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">attempt</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">10011</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;attempt&quot; value=&quot;10011&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">attempt</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">10011</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;attempt&quot; value=&quot;10011&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">attempt</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">10011</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;attempt&quot; value=&quot;10011&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">attempt</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">10011</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT type=&quot;hidden&quot; name=&quot;accessattempt&quot; value=&quot;10011&quot;&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT TYPE=&quot;submit&quot; name=&quot;Submit&quot; value=Submit&gt;&lt;/INPUT&gt;&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT TYPE=&quot;submit&quot; name=&quot;Submit&quot; value=Submit&gt;&lt;/INPUT&gt;&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;INPUT TYPE=&quot;submit&quot; name=&quot;Submit&quot; value=Submit&gt;&lt;/INPUT&gt;&lt;br&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Header</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Content-Type</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">application/x-www-form-urlencoded</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/register.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Body</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">&lt;H2&gt;User Registration by Method &quot;POST&quot; Content-Type: application/x-www-form-urlencoded....&lt;/H2&gt;</font></b></h5>
+		                    </td>
+		                </tr>
+                </table>
+
+
+
+<!-- Mid Code -->
+
+					<h4><span id="2"><font color="black" face="Impact" size="4">2. RESPONSE SPLITTING&nbsp;&nbsp;<a href="#1"><font color="gray" face="Impact" size="1">PREVIOUS</a></font>&nbsp;&nbsp;<a href="#3"><font color="gray" face="Impact" size="1">NEXT</a></font></font></span></h4>
+                <table border="1" cellpadding="5">
+                    <!-- Single Loop for <tr> as only one row for Displaying Column names-->
+                    <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="maroon" face="courier" size="2">Request URL</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="maroon" face="courier" size="2">Object Type</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="maroon" face="courier" size="2">Object Name</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="maroon" face="courier" size="2">Object Value</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="maroon" face="courier" size="2">Response URL</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="maroon" face="courier" size="2">Reflection at..</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="maroon" face="courier" size="2">Reflected at..</font></b></h5>
+		                    </td>
+                    </tr>
+
+                    <!-- FOR Loop for <tr> as well as it depends on the number of vulnerabilities found -->
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">name</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">vaibhav</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Header</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">hahah=vaibhav</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">GET: /xss/RegSuccess_GET.php?name=vaibhav&amp;telephone=9321731716&amp;birthdate=27%2F01%2F1951&amp;usernumber=177&amp;attempt=10011&amp;Submit=Submit</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">name</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">vaibhav</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Header</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">hahah=vaibhav</font></b></h5>
+		                    </td>
+		                </tr>
+		                <tr>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">POST: /xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Parameter</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">name</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">vaibhav</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">/xss/RegSuccess_POST.php</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">Header</font></b></h5>
+		                    </td>
+		                    <td valign="top">
+		                        <h5><b><font color="blue" face="Impact" size="1">hahah=vaibhav</font></b></h5>
+		                    </td>
+		                </tr>
+                </table>
+
+
+
+<!-- End Code -->
+				</div>
+            </td>
+        </tr>
+	    <tr>
+	        <td height="1%" width="100%" valign="top" colspan="3" align="center"><font face="Impact" size="2"></font></td>
+	    </tr>
+	</table>
+</body>
+
+</html>
