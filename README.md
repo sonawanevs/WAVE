@@ -1,18 +1,5 @@
 # WAVE
 WAVE - Web Application Vulnerability Scanner Enginer
-#########################################################################################
-#		 _    _  ___  _   _ _____ 														#
-#		| |  | |/ _ \| | | |  ___|														#
-#		| |  | / /_\ \ | | | |__  														#												
-#		| |/\| |  _  | | | |  __| 														#	
-#		\  /\  / | | \ \_/ / |___ 														#		
-#		 \/  \/\_| |_/\___/\____/														#	
-#																						#				
-#	 Web Application Vulnerability analyzing Engine										#		
-# 																						#			
-#	Wave v1.0 Beta           		mailto: sonawanevs@gmail.com				#	
-#																						#	
-#########################################################################################	
 
 "WAVE - Web Application Vulnerability analysis Engine" is the web application vulnerability assessment tool. The intention to write this tool is to ease an application security engineer in its manual testing process. Mostly in case of performing application security assessment on Production server. The very first release works on the determination of the Non-Persistent XSS injection points. Tool determines the parameters which are getting reflected in the response and generates the report.
 
